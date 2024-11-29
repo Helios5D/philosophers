@@ -1,7 +1,15 @@
 # My 42 Philosophers
 ## Description
+Philosophers is a program that simulates the classic "Dining Philosophers Problem," a well-known thought experiment in computer science and concurrency. The problem involves a group of philosophers sitting at a table, alternating between eating, thinking, and sleeping, with a limited number of forks available for eating.
 
-Philosophers is a project from 42 School that simulates the classic "Dining Philosophers Problem." The challenge is to manage the behavior of philosophers who alternate between eating and thinking while sharing a limited number of forks, all while avoiding deadlock and starvation.
+To eat, each philosopher needs two forks—one from their left and one from their right. Since the number of forks is limited and shared, the program must carefully manage access to these resources. The challenge lies in coordinating their actions to prevent two major issues:
+
+  - Deadlock: A situation where every philosopher is waiting for a fork, and no one can proceed.
+  - Starvation: A scenario where a philosopher is unable to eat because others are continuously taking priority.
+
+The program models philosophers as concurrent threads or processes, with mechanisms in place to control access to the forks. This involves using synchronization techniques, like mutexes or semaphores, to ensure that forks are shared efficiently and fairly among the philosophers. Timing parameters for actions like eating, thinking, and sleeping add another layer of complexity, requiring careful handling of real-time events.
+
+The result is a realistic simulation where philosophers can alternate between their activities seamlessly, with no interruptions or unfair treatment. It showcases the practical application of concurrency, resource sharing, and problem-solving in systems programming.
 ## Installation
 
 Clone the repository:
